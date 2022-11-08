@@ -1,0 +1,84 @@
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+.logo-col img {
+  width: 17rem;
+}
+.social-link {
+  list-style: none;
+  /* 2 / 4 / 8 12 / 16 / 24 / / 32 / 48 / 64 / 80 / 96 / 128 */
+  margin: 2.4rem 0;
+
+  display: flex;
+  gap: 2rem;
+}
+.social-icon {
+  width: 2rem;
+  height: 2rem;
+  filter: grayscale(100%);
+}
+
+.copyright {
+  line-height: 1.8;
+  margin-top: auto;
+}
+.nav-col {
+}
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.footer-nav {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+
+  padding: 1.8rem 0;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555555;
+}
+.footer-nav li {
+  text-decoration: none;
+}
+
+.footer {
+  border-top: 1px solid rgb(224, 224, 224);
+  padding: 9.6rem 0;
+}
+
+.border-right > * {
+  border-right: 1px solid rgb(224, 224, 224);
+}
+
+.border-right :last-child {
+  border-right: none;
+}
+.address-text {
+  line-height: 1.6;
+  padding: 1.8rem 0;
+}
+.address-contact {
+  display: flex;
+
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.grid-5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}

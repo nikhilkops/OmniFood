@@ -1,0 +1,133 @@
+.section-meals {
+  padding-top: 9.6rem;
+}
+.meal-img {
+  width: 100%;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.meal {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+
+  color: #555;
+
+  transition: all 0.8s;
+}
+
+.heading-diets {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.meal-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.meal-tags {
+  display: flex;
+  gap: 0.8rem;
+}
+.tag {
+  padding: 0.5rem 0.8rem;
+  text-transform: uppercase;
+}
+.tag-veg {
+  background-color: #40c057;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10rem;
+}
+.tag-vegan {
+  background-color: #51cf66;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10rem;
+}
+.tag-paleo {
+  background-color: #ffd43b;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10rem;
+}
+.meal-attributes {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+.list-item {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+
+  gap: 1rem;
+}
+.meal-attribute {
+  /* padding: 1rem 1rem; */
+  font-size: 2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* 12 / 14 / 16 / 18 / 2 / 24 / 30 / 36 / 44 / 52 / */
+.meal-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-top: 1.6rem;
+}
+
+.meal:hover {
+  transform: translateY(-10px);
+}
+
+.meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+
+  color: #e67e22;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.all-recipes {
+  padding: 4.8rem 0;
+  text-align: center;
+}
+
+.link:link,
+.link:visited {
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  /* padding: ; */
+}
+.link:hover,
+.link:active {
+  color: #cf711f;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.top {
+  width: 100vw;
+  height: 4rem;
+}

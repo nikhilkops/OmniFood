@@ -1,0 +1,60 @@
+/* Logo */
+.logo {
+  height: 2.4rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  background-color: #fdf2e9;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+
+  text-decoration: none;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+
+  transition: all 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 323rem;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #ffffff;
+  background-color: #cf711f;
+  /* border-bottom: 2px solid #343a40; */
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(196, 196, 196);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(143, 143, 143);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+  background-color: grey;
+
+  border-radius: 10px;
+}

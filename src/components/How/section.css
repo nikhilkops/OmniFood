@@ -1,0 +1,111 @@
+.section-how {
+  margin: 9.6rem 0 9.6rem 0;
+}
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+
+.grid-center-v {
+  align-items: center;
+}
+.grid-2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.step-text-box {
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.step-img-box {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-img-box::before {
+  position: absolute;
+
+  content: "";
+  display: block;
+  width: 60%;
+  padding-bottom: 60%;
+
+  background-color: #fdf2e9;
+  border-radius: 50%;
+
+  z-index: -2;
+}
+.step-img-box::after {
+  position: absolute;
+
+  content: "";
+  display: block;
+  width: 50%;
+  padding-bottom: 50%;
+
+  background-color: #fae5d3;
+
+  border-radius: 50%;
+
+  z-index: -2;
+}
+
+.step-img {
+  width: 30%;
+}
+.step-no {
+  font-size: 9.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.subheading {
+  color: #cf711f;
+  text-transform: uppercase;
+
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 4.4rem;
+  letter-spacing: 0.75px;
+}
+.heading-tertiary,
+.heading-secondary,
+.heading-primary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+.heading-secondary {
+  line-height: 1;
+
+  margin-bottom: 9.6rem;
+  font-size: 4.4rem;
+}
+
+.heading-tertiary {
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+}
+
+.step-description {
+  font-size: 2rem;
+  line-height: 1.8;
+}
