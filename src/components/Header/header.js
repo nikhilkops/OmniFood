@@ -4,16 +4,21 @@ import "./header.css";
 import { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../context/AuthProvider";
 
+import { ToastContainer, toast } from "react-toastify";
+
 import { NavLink } from "react-router-dom";
 
 import logo from "../../content/img/omnifood-logo.png";
 function Header() {
   const { user, logout, setUser } = useContext(AuthContext);
+
   useEffect(() => {
     const lastUser = localStorage.getItem("omnifood_user");
     // console.log(lastUser);
     // console.log(JSON.parse(lastUser));
-    setUser(JSON.parse(lastUser));
+    if (lastUser) {
+      setUser(JSON.parse(lastUser));
+    }
 
     // console.log(user);
 
@@ -24,6 +29,20 @@ function Header() {
   // console.log(user);
   return (
     <>
+      {/* -----------------------Warning of passsword not entered----------- */}
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
+      {/* ------------------------------------------------------------ */}{" "}
       <header className="header">
         <img src={logo} alt="omnifood-logo" className="logo" />
         <nav className="main-nav">

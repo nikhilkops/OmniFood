@@ -2,6 +2,8 @@ import React from "react";
 import "./pricing.css";
 
 import { AiOutlineCheck, AiOutlineClose } from "react-icons/ai";
+import { BiRupee } from "react-icons/bi";
+
 import { GiKnifeFork } from "react-icons/gi";
 
 function pricing() {
@@ -21,10 +23,16 @@ function pricing() {
             <header className="plan-header">
               <p className="plan-name">Starter</p>
               <p className="plan-price">
-                <span>$</span>399
+                <span>
+                  <BiRupee />
+                </span>
+                399
               </p>
 
-              <p className="plan-text">per month . That's just 13$ per day</p>
+              <p className="plan-text">
+                per month . That's just <BiRupee />
+                13 per day
+              </p>
             </header>
             <ul className="list">
               <li className="list-item">
@@ -67,10 +75,17 @@ function pricing() {
             <header className="plan-header">
               <p className="plan-name">Complete</p>
               <p className="plan-price">
-                <span>$</span>649
+                <span>
+                  {" "}
+                  <BiRupee />
+                </span>
+                649
               </p>
 
-              <p className="plan-text">per month . That's just 11$ per day</p>
+              <p className="plan-text">
+                per month . That's just <BiRupee />
+                11 per day
+              </p>
             </header>
             <ul className="list">
               <li className="list-item">

@@ -1,7 +1,42 @@
 import React from "react";
 import "./cta.css";
 
-function cta() {
+import { useState, useContext, useEffect } from "react";
+import { AuthContext } from "../context/AuthProvider";
+
+function Cta() {
+  const { letterSignup } = useContext(AuthContext);
+
+  let [email, setEmail] = useState("");
+  let [heard, setHeard] = useState("");
+
+  let [name, setName] = useState("");
+
+  function fSetName(e) {
+    setName(e.target.value);
+  }
+  function fSetEmail(e) {
+    setEmail(e.target.value);
+  }
+  function fSetHeard(e) {
+    setHeard(e.target.value);
+  }
+
+  async function signUp() {
+    try {
+      if (email && name && heard) {
+        let letterObj = {
+          fullName: name,
+          enterEmail: email,
+          heardAboutUs: heard,
+        };
+
+        await letterSignup(letterObj);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
   return (
     <>
       {" "}
@@ -25,6 +60,8 @@ function cta() {
                     id="full-name"
                     type="text"
                     placeholder="Enter Name"
+                    value={name}
+                    onChange={fSetName}
                     required
                   />
                 </div>
@@ -35,6 +72,8 @@ function cta() {
                     id="email"
                     type="email"
                     placeholder="me@example.com"
+                    value={email}
+                    onChange={fSetEmail}
                     required
                   />
                 </div>
@@ -43,7 +82,12 @@ function cta() {
                   <label htmlFor="select-where">
                     Where did you hear about us ?
                   </label>
-                  <select id="select-where" required>
+                  <select
+                    id="select-where"
+                    value={heard}
+                    onChange={fSetHeard}
+                    required
+                  >
                     <option value="">Please Choose One Option</option>
                     <option value="Family & Friends">Family & Friends</option>
                     <option value="Youtube">Youtube</option>
@@ -52,7 +96,12 @@ function cta() {
                     <option value="Twitter">Others</option>
                   </select>
                 </div>
-                <button className="btn">Sign up now</button>
+
+                <div className="login_button_container brown">
+                  <div className="login_button" onClick={signUp}>
+                    <a>Sign Up Now !</a>
+                  </div>
+                </div>
               </form>
             </div>
             <div className="cta-image-box"></div>
@@ -63,4 +112,4 @@ function cta() {
   );
 }
 
-export default cta;
+export default Cta;

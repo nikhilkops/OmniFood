@@ -22,7 +22,17 @@ function AuthProvider({ children }) {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const error = () => toast.error("Email not registered with us !");
-
+  const success = () =>
+    toast.success("Successfully LoggedOut !", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
   async function signUp(name, password, email, confirm) {
     let flag = false;
     try {
@@ -126,13 +136,26 @@ function AuthProvider({ children }) {
       // console.log(err.message);
     }
   }
-  function logout() {
-    localStorage.removeItem("user");
-    localStorage.removeItem("omnifood_user");
+  async function logout() {
+    try {
+      const res = await axios.post("/api/v1/auth/logout");
+      console.log(user);
+      localStorage.removeItem("user");
+      localStorage.removeItem("omnifood_user");
 
-    userSet(null);
-    document.cookie = "JWT=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    // console.log("logout will come here");
+      userSet(null);
+      success();
+    } catch (err) {
+      console.log(err.message);
+    }
+  }
+  async function letterSignup(data) {
+    try {
+      let res = await axios.post("/api/v1/newsLetter/signup", data);
+      console.log(res);
+    } catch (err) {
+      console.log(err.message);
+    }
   }
 
   function fEmail(e) {
@@ -169,6 +192,7 @@ function AuthProvider({ children }) {
     fconfirmPassword,
     confirmPassword,
     setUser,
+    letterSignup,
   };
   return (
     <AuthContext.Provider value={value}>
