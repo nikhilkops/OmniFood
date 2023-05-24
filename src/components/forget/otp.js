@@ -53,7 +53,7 @@ function ForgetPassword() {
 
       const res = forgetPassword(forgetEmail)
         .then((value) => {
-          // console.log(value);
+          console.log(value);
           if (value) {
             success();
             setLoading(false);
