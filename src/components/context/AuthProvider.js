@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 export const AuthContext = React.createContext();
 //custom hook that allows components to access context data
 
@@ -51,9 +51,9 @@ function AuthProvider({ children }) {
       let status = err.response.status;
       let statusText = err.response.statusText;
 
-      if (status == 400) {
+      if (status === 400) {
         console.log(statusText);
-      } else if (status == 500) {
+      } else if (status === 500) {
         console.log(statusText);
       }
       return flag;
